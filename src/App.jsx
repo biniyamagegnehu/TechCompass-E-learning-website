@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import Roadmaps from './pages/Roadmaps'
 import Platforms from './pages/Platforms'
 import About from './pages/About'
+import WebDevelopment from './pages/roadmaps/WebDevelopment'
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/roadmaps" element={<Roadmaps />} />
+        <Route path="/roadmaps/web-development" element={<WebDevelopment />} />
         <Route path="/platforms" element={<Platforms />} />
         <Route path="/about" element={<About />} />
       </Routes>
