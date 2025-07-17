@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Custom base styles */
+body {
+  @apply bg-[#F9FAFB] text-[#111827];
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom colors using arbitrary values */
+.bg-primary-500 { @apply bg-[#1E3A8A]; }
+.bg-primary-600 { @apply bg-[#1E40AF]; }
+.bg-secondary-500 { @apply bg-[#F59E0B]; }
+.bg-secondary-600 { @apply bg-[#D97706]; }
+.bg-accent-500 { @apply bg-[#10B981]; }
+.text-primary-500 { @apply text-[#1E3A8A]; }
+.text-secondary-500 { @apply text-[#F59E0B]; }
+.text-accent-500 { @apply text-[#10B981]; }
+.text-text { @apply text-[#111827]; }
+.bg-background { @apply bg-[#F9FAFB]; }
+.text-neutral { @apply text-[#6B7280]; }
+
+/* Components */
+.collapsible-content {
+  @apply overflow-hidden transition-[max-height] duration-200 ease-out;
+}
