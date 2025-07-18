@@ -33,5 +33,5 @@ export default function RoadmapItem({ title, steps }) {
         </div>
       </div>
     </div>
-  )
+  )  
 }
