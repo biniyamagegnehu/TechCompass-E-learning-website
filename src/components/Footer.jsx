@@ -53,7 +53,7 @@ export default function Footer() {
                 Join our community for support and discussions
               </p>
               <a 
-                href="https://t.me/techcompass_support" 
+                href="https://t.me/+R0fjFcUKhBU4NDJk" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition-colors"
