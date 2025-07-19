@@ -3,80 +3,88 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 export default function PythonRoadmap() {
-  const [activeTab, setActiveTab] = useState('roadmap');
+  const [activeTab, setActiveTab] = useState('overview');
 
-  const sections = {
+  const content = {
+    overview: {
+      title: "About Python",
+      description: [
+        "Python is a high-level, interpreted programming language known for its simplicity and readability. Created by Guido van Rossum and first released in 1991, Python emphasizes code readability with its notable use of significant whitespace.",
+        "Key characteristics include dynamic typing, automatic memory management, and support for multiple programming paradigms (object-oriented, imperative, functional).",
+        "Python's extensive standard library and vast ecosystem of third-party packages make it suitable for web development, data analysis, artificial intelligence, scientific computing, and more."
+      ],
+      features: [
+        "Easy-to-learn syntax emphasizing readability",
+        "Cross-platform compatibility",
+        "Large standard library",
+        "Dynamically typed",
+        "Strong community support"
+      ]
+    },
     roadmap: [
       {
-        title: "Python Fundamentals",
+        title: "Core Python",
         steps: [
-          "Basic syntax and data types",
-          "Control flow (loops, conditionals)",
-          "Functions and modules",
+          "Basic syntax and data structures (lists, dictionaries, tuples, sets)",
+          "Control flow (conditionals, loops)",
+          "Functions and lambda expressions",
           "File I/O operations",
           "Exception handling"
         ]
       },
       {
-        title: "Intermediate Python",
+        title: "Intermediate Concepts",
         steps: [
-          "Object-oriented programming",
-          "Working with libraries (pip)",
-          "List comprehensions",
-          "Decorators and generators",
-          "Virtual environments"
+          "Object-oriented programming (classes, inheritance)",
+          "Modules and packages",
+          "List comprehensions and generators",
+          "Decorators and context managers",
+          "Virtual environments (venv, pipenv)"
         ]
       },
       {
-        title: "Advanced Topics",
+        title: "Advanced Python",
         steps: [
-          "Concurrency (threading, asyncio)",
-          "Memory management",
-          "Metaclasses",
-          "Performance optimization",
-          "C extensions"
+          "Concurrency (threading, multiprocessing, asyncio)",
+          "Memory management and optimization",
+          "Metaclasses and descriptors",
+          "C extensions and Cython",
+          "Performance profiling"
         ]
       },
       {
         title: "Specializations",
         steps: [
-          "Web Development (Django/Flask)",
-          "Data Science (Pandas, NumPy)",
-          "Machine Learning (TensorFlow, PyTorch)",
-          "Automation & Scripting",
-          "DevOps (AWS, Docker)"
+          "Web Development: Django, Flask, FastAPI",
+          "Data Science: Pandas, NumPy, Matplotlib",
+          "Machine Learning: scikit-learn, TensorFlow",
+          "Automation: Scripting, Web Scraping",
+          "DevOps: Docker integration, AWS services"
         ]
       }
     ],
     resources: [
       {
-        category: "Official Docs",
+        category: "Official Documentation",
         items: [
-          { name: "Python Documentation", url: "https://docs.python.org/3/" },
-          { name: "PEP 8 Style Guide", url: "https://peps.python.org/pep-0008/" }
+          { name: "Python Official Docs", url: "https://docs.python.org/3/" },
+          { name: "Python Enhancement Proposals", url: "https://peps.python.org/" }
         ]
       },
       {
-        category: "Courses",
+        category: "Learning Platforms",
         items: [
-          { name: "Python for Everybody (Coursera)", url: "https://www.coursera.org/specializations/python" },
+          { name: "Python for Beginners (Microsoft)", url: "https://learn.microsoft.com/en-us/training/paths/beginner-python/" },
           { name: "Real Python Tutorials", url: "https://realpython.com" }
         ]
       },
       {
-        category: "Books",
+        category: "Recommended Books",
         items: [
-          { name: "Python Crash Course", url: "https://nostarch.com/pythoncrashcourse2e" },
-          { name: "Fluent Python", url: "https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/" }
+          { name: "Python Crash Course (Eric Matthes)", url: "https://nostarch.com/pythoncrashcourse2e" },
+          { name: "Fluent Python (Luciano Ramalho)", url: "https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/" }
         ]
       }
-    ],
-    tips: [
-      "Use type hints for better code maintainability",
-      "Learn to use Python's built-in functions effectively",
-      "Master virtual environments early (venv or conda)",
-      "Practice writing Pythonic code (follow PEP 8)",
-      "Contribute to open-source Python projects"
     ]
   };
 
@@ -84,45 +92,88 @@ export default function PythonRoadmap() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-grow pt-24 pb-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Hero Section */}
-          <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl text-white p-8 mb-12">
-            <h1 className="text-4xl font-bold mb-4">Python Development Roadmap</h1>
-            <p className="text-xl text-amber-100 max-w-3xl">
-              Master one of the world's most versatile programming languages
+        <div className="max-w-4xl mx-auto">
+          {/* Page Header */}
+          <div className="mb-12 text-center">
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">Python Development Roadmap</h1>
+            <p className="text-xl text-gray-600">
+              A structured guide to mastering Python programming
             </p>
           </div>
 
           {/* Tab Navigation */}
           <div className="flex border-b border-gray-200 mb-8">
-            {['roadmap', 'resources', 'tips'].map((tab) => (
+            {['overview', 'roadmap', 'resources'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`px-6 py-3 font-medium text-sm capitalize ${activeTab === tab 
-                  ? 'text-amber-600 border-b-2 border-amber-600' 
+                  ? 'text-blue-600 border-b-2 border-blue-600' 
                   : 'text-gray-500 hover:text-gray-700'}`}
               >
-                {tab}
+                {tab.replace('-', ' ')}
               </button>
             ))}
           </div>
 
-          {/* Roadmap Content */}
+          {/* Content Sections */}
+          {activeTab === 'overview' && (
+            <div className="space-y-8">
+              <div className="bg-white rounded-lg shadow-sm p-6">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-4">{content.overview.title}</h2>
+                {content.overview.description.map((paragraph, index) => (
+                  <p key={index} className="text-gray-700 mb-4">{paragraph}</p>
+                ))}
+              </div>
+
+              <div className="bg-white rounded-lg shadow-sm p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Key Features</h3>
+                <ul className="list-disc pl-5 space-y-2">
+                  {content.overview.features.map((feature, index) => (
+                    <li key={index} className="text-gray-700">{feature}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-sm p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Why Learn Python?</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-medium text-gray-800 mb-2">Strengths</h4>
+                    <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                      <li>Versatile across multiple domains</li>
+                      <li>Large community and ecosystem</li>
+                      <li>Excellent for rapid prototyping</li>
+                      <li>Strong data processing capabilities</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-800 mb-2">Considerations</h4>
+                    <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                      <li>Not ideal for mobile development</li>
+                      <li>Slower execution than compiled languages</li>
+                      <li>Dynamic typing can lead to runtime errors</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {activeTab === 'roadmap' && (
-            <div className="grid md:grid-cols-2 gap-8">
-              {sections.roadmap.map((section, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden">
-                  <div className={`bg-gradient-to-r ${index % 2 === 0 ? 'from-blue-500 to-blue-600' : 'from-amber-500 to-amber-600'} p-4`}>
+            <div className="space-y-6">
+              {content.roadmap.map((section, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-sm overflow-hidden">
+                  <div className="bg-gray-800 p-4">
                     <h2 className="text-xl font-bold text-white">{section.title}</h2>
                   </div>
                   <div className="p-6">
                     <ol className="list-decimal pl-5 space-y-3">
                       {section.steps.map((step, i) => (
                         <li key={i} className="text-gray-700">
-                          <span className="font-medium">{step}</span>
+                          {step}
                           {index === 0 && i === 0 && (
-                            <span className="ml-2 bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded-full">Start here</span>
+                            <span className="ml-2 bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded-full">Begin here</span>
                           )}
                         </li>
                       ))}
@@ -133,11 +184,10 @@ export default function PythonRoadmap() {
             </div>
           )}
 
-          {/* Resources Content */}
           {activeTab === 'resources' && (
-            <div className="grid md:grid-cols-3 gap-6">
-              {sections.resources.map((category, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-6">
+              {content.resources.map((category, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-sm overflow-hidden">
                   <div className="bg-gray-800 p-4">
                     <h2 className="text-lg font-bold text-white">{category.category}</h2>
                   </div>
@@ -149,9 +199,9 @@ export default function PythonRoadmap() {
                             href={item.url} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="flex items-center text-blue-600 hover:text-blue-800"
+                            className="flex items-center text-blue-600 hover:text-blue-800 hover:underline"
                           >
-                            <span className="truncate">{item.name}</span>
+                            <span>{item.name}</span>
                             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                             </svg>
@@ -165,43 +215,20 @@ export default function PythonRoadmap() {
             </div>
           )}
 
-          {/* Tips Content */}
-          {activeTab === 'tips' && (
-            <div className="bg-white rounded-xl shadow-md overflow-hidden">
-              <div className="bg-gradient-to-r from-green-500 to-green-600 p-4">
-                <h2 className="text-xl font-bold text-white">Professional Python Tips</h2>
-              </div>
-              <div className="p-6">
-                <ul className="space-y-4">
-                  {sections.tips.map((tip, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="flex-shrink-0 bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1">
-                        {index + 1}
-                      </span>
-                      <span className="text-gray-700">{tip}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
-
-          {/* Python Use Cases */}
-          <div className="mt-12 bg-white rounded-xl shadow-md overflow-hidden">
-            <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-4">
-              <h2 className="text-xl font-bold text-white">Python Applications</h2>
-            </div>
-            <div className="p-6 grid md:grid-cols-4 gap-4">
+          {/* Python Applications Section */}
+          <div className="mt-12 bg-white rounded-lg shadow-sm p-6">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Python Applications</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { icon: '🌐', name: 'Web Development', frameworks: 'Django, Flask, FastAPI' },
-                { icon: '📊', name: 'Data Science', frameworks: 'Pandas, NumPy, Matplotlib' },
-                { icon: '🧠', name: 'AI/ML', frameworks: 'TensorFlow, PyTorch, scikit-learn' },
-                { icon: '🤖', name: 'Automation', frameworks: 'Selenium, BeautifulSoup' }
+                { name: "Web Development", icon: "🌐", tech: "Django, Flask" },
+                { name: "Data Science", icon: "📊", tech: "Pandas, NumPy" },
+                { name: "Machine Learning", icon: "🧠", tech: "TensorFlow, PyTorch" },
+                { name: "Automation", icon: "⚙️", tech: "Selenium, BeautifulSoup" }
               ].map((app, index) => (
-                <div key={index} className="border border-gray-200 rounded-lg p-4 hover:border-purple-300 transition-colors">
-                  <div className="text-3xl mb-2">{app.icon}</div>
-                  <h3 className="font-bold text-gray-800">{app.name}</h3>
-                  <p className="text-sm text-gray-600 mt-1">{app.frameworks}</p>
+                <div key={index} className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors">
+                  <div className="text-2xl mb-2">{app.icon}</div>
+                  <h3 className="font-medium text-gray-800">{app.name}</h3>
+                  <p className="text-sm text-gray-600 mt-1">{app.tech}</p>
                 </div>
               ))}
             </div>
