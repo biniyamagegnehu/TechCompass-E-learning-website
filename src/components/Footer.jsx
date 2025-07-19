@@ -16,13 +16,13 @@ export default function Footer() {
                 </div>
               </div>
               <div>
-                <p className="font-medium">TechCompass Team</p>
-                <p className="text-gray-400 text-sm mt-1">Passionate about making tech education accessible</p>
+                <p className="font-medium">Biniyam Agegnehu </p>
+                <p className="text-gray-400 text-sm mt-1">Passionate developer</p>
                 <a 
                   href="https://biniyam-agegnehu-portfolio.netlify.app/" 
                   className="text-blue-400 hover:text-blue-300 text-sm inline-block mt-2"
                 >
-                  dev@techcompass.dev
+                  Portfolio
                 </a>
               </div>
             </div>
