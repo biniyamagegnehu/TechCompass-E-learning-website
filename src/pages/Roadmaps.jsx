@@ -4,6 +4,16 @@ import RoadmapCard from '../components/RoadmapCard';
 
 const roadmaps = [
   {
+  id: 'beginner-programming',
+  title: 'Absolute Beginner Programming',
+  description: 'Start coding from scratch with no experience needed',
+  icon: '👶',
+  steps: 4,
+  duration: '3-5 months',
+  bgColor: 'bg-gradient-to-br from-blue-400 to-blue-500',
+  borderColor: 'border-blue-300'
+},
+  {
     id: 'web-development',
     title: 'Web Development',
     description: 'Become a full-stack web developer',

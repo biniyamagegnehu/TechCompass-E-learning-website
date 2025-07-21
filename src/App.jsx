@@ -9,6 +9,7 @@ import DataScience from './pages/roadmaps/DataScience'
 import MobileDevelopmentRoadmap from './pages/roadmaps/MobileDevelopmentRoadmap'
 import AIRoadmap from './pages/roadmaps/AIRoadmap'
 import IoT from './pages/roadmaps/IoTRoadmap'
+import Programming from './pages/roadmaps/Programming'
 
 export default function App() {
   return (
@@ -21,7 +22,8 @@ export default function App() {
         <Route path="/roadmaps/data-science" element={<DataScience />} />  
         <Route path="/roadmaps/mobile-development" element={<MobileDevelopmentRoadmap />} />      
         <Route path="/roadmaps/ai" element={<AIRoadmap />} />   
-        <Route path="/roadmaps/iot" element={<IoT />} />      
+        <Route path="/roadmaps/iot" element={<IoT />} /> 
+        <Route path="/roadmaps/beginner-programming" element={<Programming />} />     
         <Route path="/platforms" element={<Platforms />} />
         <Route path="/about" element={<About />} />
       </Routes>
