@@ -89,17 +89,17 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-         <section className="py-16 bg-primary-500">
+        <section className="py-16 bg-primary-500">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">
               Ready to Start Your Tech Journey?
             </h2>
-            <p className="text-xl max-w-2xl mx-auto mb-8 text-primary-100">
+            <p className="text-xl max-w-2xl mx-auto mb-8 text-indigo-100">
               Join thousands of beginners who've successfully navigated their tech education with our guidance.
             </p>
             <Link
               to="/roadmaps"
-              className="inline-block bg-white text-primary-600 font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105"
+              className="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold px-8 py-3 rounded-lg transition-all transform hover:scale-105 shadow-md"
             >
               Get Started Now
             </Link>
