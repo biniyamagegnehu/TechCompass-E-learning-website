@@ -35,7 +35,7 @@ const roadmaps = [
   },
   {
     id: 'mobile-development',
-    title: 'Mobile Development',
+    title: 'Mobile App Development',
     description: 'Build cross-platform mobile apps',
     icon: '📱',
     steps: 6,
@@ -52,6 +52,16 @@ const roadmaps = [
     duration: '6-8 months',
     bgColor: 'bg-gradient-to-br from-red-500 to-red-600',
     borderColor: 'border-red-400'
+  },
+  {
+    id: 'iot',
+    title: 'IoT Development',
+    description: 'Build Internet of Things solutions',
+    icon: '🌐',
+    steps: 5,
+    duration: '3-5 months',
+    bgColor: 'bg-gradient-to-br from-cyan-500 to-cyan-600',
+    borderColor: 'border-cyan-400'
   }
 ];
 
