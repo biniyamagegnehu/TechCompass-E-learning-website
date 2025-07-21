@@ -32,6 +32,16 @@ const roadmaps = [
     duration: '5-7 months',
     bgColor: 'bg-gradient-to-br from-emerald-400 to-emerald-600',
     borderColor: 'border-emerald-300'
+  },
+  {
+    id: 'mobile-development',
+    title: 'Mobile Development',
+    description: 'Build cross-platform mobile apps',
+    icon: '📱',
+    steps: 6,
+    duration: '4-6 months',
+    bgColor: 'bg-gradient-to-br from-purple-500 to-purple-600',
+    borderColor: 'border-purple-400'
   }
 ];
 
