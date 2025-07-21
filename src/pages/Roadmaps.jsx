@@ -42,6 +42,16 @@ const roadmaps = [
     duration: '4-6 months',
     bgColor: 'bg-gradient-to-br from-purple-500 to-purple-600',
     borderColor: 'border-purple-400'
+  },
+  {
+    id: 'ai',
+    title: 'Artificial Intelligence',
+    description: 'Master AI and machine learning',
+    icon: '🤖',
+    steps: 7,
+    duration: '6-8 months',
+    bgColor: 'bg-gradient-to-br from-red-500 to-red-600',
+    borderColor: 'border-red-400'
   }
 ];
 
