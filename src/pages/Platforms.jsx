@@ -66,22 +66,6 @@ export default function Platforms() {
             </p>
           </div>
 
-          {/* Filter Bar */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium">
-              All Platforms
-            </button>
-            <button className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50">
-              Free Only
-            </button>
-            <button className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50">
-              Web Development
-            </button>
-            <button className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50">
-              Data Science
-            </button>
-          </div>
-
           {/* Platforms Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {platforms.map((platform, index) => (
