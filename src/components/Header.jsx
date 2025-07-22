@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 export default function Header() {
@@ -12,57 +12,16 @@ export default function Header() {
     <header className="fixed w-full bg-white shadow-sm z-50">
       <div className="container mx-auto px-4 py-6">
         <div className="flex justify-between items-center">
-          <NavLink 
-            to="/" 
-            className="flex items-center space-x-2"
-            end
-          >
+          <Link to="/" className="flex items-center space-x-2">
             <span className="text-2xl font-bold text-primary-600">TechCompass</span>
-          </NavLink>
+          </Link>
           
           {/* Desktop Navigation - Hidden on mobile */}
           <nav className="hidden md:flex space-x-8">
-            <NavLink 
-              to="/" 
-              className={({ isActive }) => 
-                `font-medium px-3 py-2 rounded-md ${isActive 
-                  ? 'bg-primary-100 text-primary-600' 
-                  : 'text-gray-600 hover:text-primary-600'}`
-              }
-              end
-            >
-              Home
-            </NavLink>
-            <NavLink 
-              to="/roadmaps" 
-              className={({ isActive }) => 
-                `font-medium px-3 py-2 rounded-md ${isActive 
-                  ? 'bg-primary-100 text-primary-600' 
-                  : 'text-gray-600 hover:text-primary-600'}`
-              }
-            >
-              Roadmaps
-            </NavLink>
-            <NavLink 
-              to="/platforms" 
-              className={({ isActive }) => 
-                `font-medium px-3 py-2 rounded-md ${isActive 
-                  ? 'bg-primary-100 text-primary-600' 
-                  : 'text-gray-600 hover:text-primary-600'}`
-              }
-            >
-              Platforms
-            </NavLink>
-            <NavLink 
-              to="/about" 
-              className={({ isActive }) => 
-                `font-medium px-3 py-2 rounded-md ${isActive 
-                  ? 'bg-primary-100 text-primary-600' 
-                  : 'text-gray-600 hover:text-primary-600'}`
-              }
-            >
-              About
-            </NavLink>
+            <Link to="/" className="text-gray-600 hover:text-primary-600 font-medium">Home</Link>
+            <Link to="/roadmaps" className="text-gray-600 hover:text-primary-600 font-medium">Roadmaps</Link>
+            <Link to="/platforms" className="text-gray-600 hover:text-primary-600 font-medium">Platforms</Link>
+            <Link to="/about" className="text-gray-600 hover:text-primary-600 font-medium">About</Link>
           </nav>
           
           {/* Mobile Menu Button */}
@@ -86,52 +45,35 @@ export default function Header() {
         
         {/* Mobile Menu - Conditionally rendered */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 space-y-2">
-            <NavLink 
+          <nav className="md:hidden mt-4 pb-4 space-y-3">
+            <Link 
               to="/" 
-              className={({ isActive }) => 
-                `block py-2 px-3 rounded-md font-medium ${isActive 
-                  ? 'bg-primary-100 text-primary-600' 
-                  : 'text-gray-600 hover:text-primary-600'}`
-              }
+              className="block py-2 text-gray-600 hover:text-primary-600 font-medium"
               onClick={toggleMenu}
-              end
             >
               Home
-            </NavLink>
-            <NavLink 
+            </Link>
+            <Link 
               to="/roadmaps" 
-              className={({ isActive }) => 
-                `block py-2 px-3 rounded-md font-medium ${isActive 
-                  ? 'bg-primary-100 text-primary-600' 
-                  : 'text-gray-600 hover:text-primary-600'}`
-              }
+              className="block py-2 text-gray-600 hover:text-primary-600 font-medium"
               onClick={toggleMenu}
             >
               Roadmaps
-            </NavLink>
-            <NavLink 
+            </Link>
+            <Link 
               to="/platforms" 
-              className={({ isActive }) => 
-                `block py-2 px-3 rounded-md font-medium ${isActive 
-                  ? 'bg-primary-100 text-primary-600' 
-                  : 'text-gray-600 hover:text-primary-600'}`
-              }
+              className="block py-2 text-gray-600 hover:text-primary-600 font-medium"
               onClick={toggleMenu}
             >
               Platforms
-            </NavLink>
-            <NavLink 
+            </Link>
+            <Link 
               to="/about" 
-              className={({ isActive }) => 
-                `block py-2 px-3 rounded-md font-medium ${isActive 
-                  ? 'bg-primary-100 text-primary-600' 
-                  : 'text-gray-600 hover:text-primary-600'}`
-              }
+              className="block py-2 text-gray-600 hover:text-primary-600 font-medium"
               onClick={toggleMenu}
             >
               About
-            </NavLink>
+            </Link>
           </nav>
         )}
       </div>
