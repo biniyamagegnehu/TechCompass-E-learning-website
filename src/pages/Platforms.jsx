@@ -379,7 +379,7 @@ export default function Platforms() {
                 </li>
               </ul>
               <a
-                href="#"
+                href="/roadmaps/beginner-programming"
                 className="inline-flex items-center justify-center w-full bg-white text-blue-600 px-4 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors"
               >
                 Explore Beginner Roadmap
