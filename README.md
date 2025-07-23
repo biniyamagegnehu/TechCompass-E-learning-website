@@ -1,12 +1,45 @@
-# React + Vite
+# TechCompass 🧭
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Navigate Your Tech Journey** – A beginner-friendly platform to help you master programming and technology through structured roadmaps and curated resources.
 
-Currently, two official plugins are available:
+![Home Page](./assets/screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 About
 
-## Expanding the ESLint configuration
+**TechCompass** is designed to guide beginners who are eager to start their journey in programming and technology. It provides:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📚 **Structured Roadmaps**: Step-by-step guides for various tech domains.
+- 🔗 **Curated Learning Resources**: Recommended courses, websites, and platforms to learn effectively.
+- 🧭 **Career Pathways**: Guidance on potential career paths in the tech industry.
+
+Whether you're exploring web development, data science, or software engineering, TechCompass helps you stay on track.
+
+## 🚀 Features
+
+- Clean, modern UI using **React** and **Tailwind CSS**
+- Interactive roadmaps for different programming tracks
+- Curated learning platforms and tools
+- Recommendations for real-world career progression
+
+## 🛠️ Built With
+
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+
+## 📦 Installation
+
+## 🌐 Live Demo
+
+Check out the live version of TechCompass here:  
+🔗 [https://tech-compass.netlify.app](https://tech-compass.netlify.app)
+
+## 🛠️ Local Setup (Optional)
+
+To run the project locally:
+
+```bash
+git clone https://github.com/your-username/techcompass.git
+cd techcompass
+npm install
+npm run dev
