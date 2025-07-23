@@ -17,6 +17,11 @@ export default function Header() {
             className="flex items-center space-x-2"
             end
           >
+                      <img 
+            src="/logo.png" 
+            alt="TechCompass Logo" 
+            className="h-10 w-auto"
+          />
             <span className="text-2xl font-bold text-primary-600">TechCompass</span>
           </NavLink>
           
