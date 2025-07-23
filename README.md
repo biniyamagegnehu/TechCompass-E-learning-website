@@ -2,7 +2,7 @@
 
 **Navigate Your Tech Journey** – A beginner-friendly platform to help you master programming and technology through structured roadmaps and curated resources.
 
-![Home Page](./assets/screenshot.png)
+![Home Page](./src/assets/screenshot.png)
 
 ## 🌟 About
 
